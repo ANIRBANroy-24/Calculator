@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  border: 2px solid #e6e63b;
+  padding: 25px 18px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07), 0 1.5px 2.5px rgba(0,0,0,0.05);
+  width: 340px;
+}
+
+#display {
+  width: 100%;
+  background: #a555cd;
+  color: #fff;
+  font-size: 24px;
+  padding: 16px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 7px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Layout */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 11px;
+}
+
+/* Standard button style */
+button {
+  font-size: 18px;
+  border: none;
+  border-radius: 7px;
+  padding: 12px 0;
+  background: #61cfe2;
+  color: #222;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* Special button colors */
+button.clear {
+  background: #ff3b30;
+  color: #fff;
+}
+
+button.backspace {
+  background: #ff3b30;
+  color: #fff;
+}
+
+button.operator,
+button.special {
+  background: #ffa600;
+  color: #fff;
+}
+
+button.equals {
+  background: #34c759;
+  color: #fff;
+}
+
+button.special {
+  background: #66d0e3;
+  color: #222;
+}
+
+/* Override for some operators to match screenshot colors */
+button.operator {
+  background: #ffa600;
+  color: #fff;
+}
+
+/* Redefine clear and equals hover state */
+button.clear:hover { background: #e62e2e; }
+button.backspace:hover { background: #e62e2e;}
+button.equals:hover { background: #2dbb52; }
+button.operator:hover { background: #e68a00; }
+button.special:hover { background: #38bada; }
+button:hover { filter: brightness(1.08); }
+
+/* Responsive: optional */
+@media (max-width: 400px) {
+  .calculator { width: 95vw; padding: 6vw 2vw; }
+  #display { font-size: 5vw; }
+  button { padding: 9px 0; font-size: 4vw; }
+}

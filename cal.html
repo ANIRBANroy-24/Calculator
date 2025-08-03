@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" readonly />
+    <div class="buttons">
+      <button class="clear" onclick="clearDisplay()">C</button>
+      <button class="backspace" onclick="backspace()">⌫</button>
+      <button class="operator" onclick="insert('%')">%</button>
+      <button class="operator" onclick="insert('/')">/</button>
+
+      <button onclick="insert('7')">7</button>
+      <button onclick="insert('8')">8</button>
+      <button onclick="insert('9')">9</button>
+      <button class="operator" onclick="insert('*')">×</button>
+
+      <button onclick="insert('4')">4</button>
+      <button onclick="insert('5')">5</button>
+      <button onclick="insert('6')">6</button>
+      <button class="operator" onclick="insert('-')">-</button>
+
+      <button onclick="insert('1')">1</button>
+      <button onclick="insert('2')">2</button>
+      <button onclick="insert('3')">3</button>
+      <button class="operator" onclick="insert('+')">+</button>
+
+      <button onclick="insert('0')">0</button>
+      <button onclick="insert('.')">.</button>
+      <button class="equals" onclick="calculate()">=</button>
+      <button class="special" onclick="square()">x²</button>
+
+      <button class="special" onclick="cube()">x³</button>
+      <button class="special" onclick="factorial()">x!</button>
+      <button class="special" onclick="insert('(')">(</button>
+      <button class="special" onclick="insert(')')">)</button>
+
+      <button class="special" onclick="insertFunction('sin')">sin</button>
+      <button class="special" onclick="insertFunction('cos')">cos</button>
+      <button class="special" onclick="insertFunction('tan')">tan</button>
+      <button class="special" onclick="insertFunction('log')">log</button>
+
+      <button class="special" onclick="insertFunction('ln')">ln</button>
+      <button class="special" onclick="insert('^')">^</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
